@@ -1,0 +1,26 @@
+info:
+  name: 01-get-users
+  type: http
+  seq: 1
+
+http:
+  method: DELETE
+  url: https://jsonplaceholder.typicode.com/posts/1
+  body:
+    type: json
+    data: |+
+      {
+        "id" : 1,
+        "title": "csmju",
+        "body": "I am computer science",
+        "userId": 1
+      }
+
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
